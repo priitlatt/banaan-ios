@@ -17,7 +17,7 @@ workflows:
         echo $CERTIFICATE | base64 --decode > '/tmp/certificate.p12'
         keychain add-certificates --certificate '/tmp/certificate.p12'
       - |
-        echo 'skip setting profiles'
+        mv empty.plist ~/export_options.plist
         # xcode-project use-profiles
       - script: agvtool new-version -all "1.0.$BUILD_NUMBER"
         working_directory: ios-test2
