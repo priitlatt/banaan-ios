@@ -13,7 +13,7 @@ workflows:
         APPLE_ID: Encrypted(Z0FBQUFBQmd0ZjlNa2Fwck5xWmFMcU9sazRtTnpjQnJYdnZTaVY1MndpM3ZCMEFTb0VYMnQyVGltNnUxTkY2WWJ4ODZsUU5nQlVhWjBsWi1kZVJTbGtNaEphU05rSkNqXzJ5anJYR3c4aWMtZG5tdDItbHhsQ2c9)
         APP_SPECIFIC_PASSWORD: Encrypted(Z0FBQUFBQmd0ZjlWc25VSUt0c1NUamp0bXNJOTRhTENHeEhNS2Y2WUdidms5amQzUkxzNW5RWU9vam9ENzA0MFY4Tzc0WXJuLV9wa2NmR2p5VXpqVE92OVJTV2MxNkVUMV9JRUdJWi1yTlVHSTkyMldrb2dDeEk9)
 #         APP_STORE_CONNECT_MAX_BUILD_PROCESSING_WAIT: 2
-      xcode: 12.5
+      xcode: 13.0
       cocoapods: default
     scripts:
       - keychain initialize
@@ -27,17 +27,17 @@ workflows:
 #       - name: Run tests
 #         script: xcode-project run-tests --project "ios-test2/banaan.xcodeproj" --scheme "banaan" --graceful-exit
 #         test_report: build/ios/test/*.xml
-      - name: Generate notes
-        script: |
-          echo '[{"language": "en-GB", "text": "en-GB notes"}, {"language": "en-US", "text": "en-US notes"}, {"language": "fi", "text": "fi notes"}]' > release_notes.json
+#      - name: Generate notes
+#        script: |
+#          echo '[{"language": "en-GB", "text": "en-GB notes"}, {"language": "en-US", "text": "en-US notes"}, {"language": "fi", "text": "fi notes"}]' > release_notes.json
     artifacts:
       - build/ios/ipa/*.ipa
       - /tmp/xcodebuild_logs/*.log
     publishing:
       app_store_connect:
-        submit_to_testflight: true
-        beta_groups:
-          - Aaa
+#        submit_to_testflight: true
+#        beta_groups:
+#          - Aaa
 #       apple_id: $APPLE_ID
 #       password: $APP_SPECIFIC_PASSWORD
         api_key: $APP_STORE_CONNECT_PRIVATE_KEY
