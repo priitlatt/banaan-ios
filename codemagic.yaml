@@ -28,7 +28,7 @@ workflows:
       - name: Build ipa
         script: |
           xcode-project build-ipa --project "$PROJECT_DIR/banaan.xcodeproj" --scheme "banaan"
-          mv build/ios/ipa/banaan.ipa "build/ios/ipa/banaan_1_0_$BUILD_NUMBER_$PROJECT_BUILD_NUMBER.ipa"
+          mv build/ios/ipa/banaan.ipa "build/ios/ipa/banaan_1_0_${BUILD_NUMBER}_${PROJECT_BUILD_NUMBER}.ipa"
       - name: Generate notes
         script: |
          echo '[{"language": "en-GB", "text": "en-GB notes"}, {"language": "en-US", "text": "en-US notes"}, {"language": "fi", "text": "fi notes"}]' > release_notes.json
