@@ -32,7 +32,7 @@ workflows:
           mv build/ios/ipa/banaan.ipa "build/ios/ipa/banaan_1_0_${BUILD_NUMBER}_${PROJECT_BUILD_NUMBER}.ipa"
       - name: Generate notes
         script: |
-          cat release_notes.json << EOF
+          cat > release_notes.json << EOF
           [
             {"language": "en-GB", "text": "en-GB notes for build 1.0.${BUILD_NUMBER:?}.${PROJECT_BUILD_NUMBER:?}"},
             {"language": "en-US", "text": "en-US notes for build 1.0.${BUILD_NUMBER:?}.${PROJECT_BUILD_NUMBER:?}"},
