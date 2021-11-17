@@ -15,7 +15,6 @@ workflows:
       xcode: 13.0
       cocoapods: default
     scripts:
-      - python -m pip install --upgrade https://priitlatt@github.com/codemagic-ci-cd/cli-tools/archive/refs/heads/feature/app-store-review.zip
       - echo "Using App Store API key $APP_STORE_CONNECT_KEY_IDENTIFIER"
       - keychain initialize
       - app-store-connect fetch-signing-files "io.codemagic.banaan" --type IOS_APP_STORE --create
