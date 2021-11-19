@@ -46,14 +46,14 @@ workflows:
 
   test-app:
     name: Test App
-    instance_type: mac_pro
+    instance_type: mac_pro_artemii
     max_build_duration: 10
     environment:
-      xcode: 12.5
+      xcode: 13.2
       cocoapods: default
     scripts:
       - name: Run tests
-        script: xcode-project run-tests --project "ios-test2/banaan.xcodeproj" --scheme "banaan" --device "iOS 14.0 iPhone 11"
+        script: xcode-project run-tests --project "ios-test2/banaan.xcodeproj" --scheme "banaan" --device "iOS 15.2 iPhone 11"
         test_report: build/ios/test/*.xml
     artifacts:
       - /tmp/xcodebuild_logs/*.log
