@@ -44,6 +44,7 @@ workflows:
     publishing:
       app_store_connect:
         submit_to_testflight: true
+        submit_to_app_store: true
         beta_groups:
           - Aaa
           - Priit's group
