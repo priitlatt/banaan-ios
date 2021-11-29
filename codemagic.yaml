@@ -52,6 +52,8 @@ workflows:
       xcode: 12.5
       cocoapods: default
     scripts:
+      - date
+      - echo "Running tests only"
       - name: Run tests
         script: xcode-project run-tests --project "ios-test2/banaan.xcodeproj" --scheme "banaan" --device "iOS 14.0 iPhone 11"
         test_report: build/ios/test/*.xml
