@@ -6,6 +6,8 @@ workflows:
     environment:
       vars:
         PROJECT_DIR: ios-test2
+      groups:
+        - Apple API key (Admin)
       xcode: 13.0
       cocoapods: default
     scripts:
