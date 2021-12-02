@@ -27,7 +27,16 @@ workflows:
           cache_addresses:
           - $XC_REMOTE_CACHE_ADDRESS
           EOF
-          xcremotecache/xcprepare integrate --input banaan.xcodeproj --mode producer --final-producer-target banaan
+
+          if [ "${XC_REMOTE_CACHE_MODE}" = "consumer" ]; then
+            echo "Initialize XCRemoteCache in consumer mode"
+            xcremotecache/xcprepare integrate --input banaan.xcodeproj --mode consumer --configuration Release --consumer-eligible-platforms 'iphoneos'
+          elif [ "${XC_REMOTE_CACHE_MODE}" = "producer" ]; then
+            echo "Initialize XCRemoteCache in producer mode"
+            xcremotecache/xcprepare integrate --input banaan.xcodeproj --mode producer --final-producer-target banaan
+          else
+            echo "Invalid input for XC_REMOTE_CACHE_MODE: \"${XC_REMOTE_CACHE_MODE}\""
+          fi
         working_directory: $PROJECT_DIR
       - keychain initialize
       - app-store-connect fetch-signing-files "io.codemagic.banaan" --type IOS_APP_STORE --create
