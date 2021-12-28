@@ -46,7 +46,7 @@ workflows:
             echo "XC Remote Cache mode is not specified or invalid (XC_REMOTE_CACHE_MODE: \"${XC_REMOTE_CACHE_MODE}\"). Skip setting up cache"
           fi
       - keychain initialize
-      - app-store-connect fetch-signing-files "io.codemagic.banaan" --type IOS_APP_STORE --create --verbose --log-api-calls
+      - app-store-connect fetch-signing-files "io.codemagic.banaan" --type IOS_APP_STORE --create
       - keychain add-certificates
       - xcode-project use-profiles
       - name: Set build version
