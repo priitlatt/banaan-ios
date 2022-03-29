@@ -13,7 +13,7 @@ workflows:
             environment_variable: PROFILE_VAR
       android_signing:
         - keystore: keystore uploaded
-          keystore_environmet_variable: KEYSTORE_VAR
+          keystore_environment_variable: KEYSTORE_VAR
           keystore_password_environment_variable: KEYSTORE_PASS_VAR
           key_alias_environment_variable: KEYSTORE_ALIAS_VAR
     scripts:
