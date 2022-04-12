@@ -17,5 +17,5 @@ workflows:
 #           keystore_password_environment_variable: KEYSTORE_PASS_VAR
 #           key_alias_environment_variable: KEYSTORE_ALIAS_VAR
     scripts:
-      - printenv
+      - printenv | grep KEY
       - sleep 30
