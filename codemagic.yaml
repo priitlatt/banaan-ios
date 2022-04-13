@@ -5,6 +5,7 @@ workflows:
     environment:
       groups:
         - Apple API key (Admin)
+        - App Store Connect API
     scripts:
       - keychain initialize
       - app-store-connect fetch-signing-files "io.codemagic.banaan" --type IOS_APP_STORE --create
