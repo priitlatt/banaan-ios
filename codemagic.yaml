@@ -1,7 +1,7 @@
 workflows:
   build-app:
     name: Build App
-    instance_type: mac_pro
+    instance_type: mac_mini_m1
     max_build_duration: 5
     environment:
       vars:
