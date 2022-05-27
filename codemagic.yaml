@@ -15,9 +15,6 @@ workflows:
       xcode: latest
       cocoapods: default
     scripts:
-      - |
-        python3 -m pip uninstall -y codemagic-cli-tools
-        pip install https://github.com/codemagic-ci-cd/cli-tools/archive/refs/heads/bugfix/use-profiles-infoplist-settings-inheritance.zip
       - echo "Using App Store API key $APP_STORE_CONNECT_KEY_IDENTIFIER"
       - keychain initialize
       - app-store-connect fetch-signing-files "io.codemagic.banaan" --type IOS_APP_STORE --create
