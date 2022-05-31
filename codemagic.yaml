@@ -1,6 +1,7 @@
 workflows:
   ruby-version:
     instance_type: mac_pro
+    environment:
       ruby: 2.5.5
     scripts:
       - ruby --version
