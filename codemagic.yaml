@@ -4,5 +4,5 @@ workflows:
     environment:
       ruby: 2.5.5
     scripts:
-      - ruby --version
+      - echo $RBENV_VERSION
       - sleep 30
