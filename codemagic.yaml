@@ -5,8 +5,6 @@ workflows:
       groups:
         - App Store Connect API
     scripts:
-      - python3 -m pip uninstall -y codemagic-cli-tools
-      - python3 -m pip install https://github.com/codemagic-ci-cd/cli-tools/archive/refs/heads/typing/resource-manager-mixin-type-hints.zip
       - keychain initialize
       - app-store-connect fetch-signing-files "io.codemagic.banaan" --type IOS_APP_STORE --create
       - keychain add-certificates
