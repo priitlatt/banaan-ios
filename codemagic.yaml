@@ -2,6 +2,7 @@ workflows:
   build-app:
     name: Build App
     environment:
+      xcode: 13.3.1
       groups:
         - App Store Connect API
     scripts:
