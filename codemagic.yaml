@@ -33,6 +33,7 @@ workflows:
         script: |
          echo '[{"language": "en-GB", "text": "en-GB notes"}, {"language": "en-US", "text": "en-US notes"}, {"language": "fi", "text": "fi notes"}]' > release_notes.json
     artifacts:
+      - build/ios/xcarchive/*.xcarchive
       - build/ios/ipa/*.ipa
       - /tmp/xcodebuild_logs/*.log
 
