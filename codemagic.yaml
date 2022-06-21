@@ -25,6 +25,7 @@ workflows:
         script: |
           mkdir -p /tmp/logs/app-store-export-archive-logs
           mkdir ~/appstoreexport
+          touch /tmp/resultBundleStream.json
           xcodebuild archive \
             -project ios-test2/banaan.xcodeproj \
             -scheme banaan \
@@ -32,7 +33,7 @@ workflows:
             -archivePath banaan.xcarchive \
             -resultBundleVersion 3 \
             -resultBundlePath resultbundle.xcresult \
-            -resultStreamPath /tmp/resultBundleStreamd2e9bba2-d26f-445a-b0b5-d36dee4f5198.json \
+            -resultStreamPath /tmp/resultBundleStream.json \
             -IDEPostProgressNotifications=YES \
             CODE_SIGN_IDENTITY=- \
             AD_HOC_CODE_SIGNING_ALLOWED=YES \
@@ -56,3 +57,4 @@ workflows:
       - banaan.xcarchive
       - /tmp/logs/app-store-export-archive-logs/*.log
       - $HOME/appstoreexport/*
+      - /tmp/resultBundleStream.json
