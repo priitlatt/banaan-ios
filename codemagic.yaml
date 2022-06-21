@@ -47,11 +47,13 @@ workflows:
             -archivePath banaan.xcarchive \
             -exportPath $HOME/appstoreexport \
             -exportOptionsPlist export_options.plist \
-            '-DVTPortalRequest.Endpoint=http://172.16.124.194:8089' \
-            -DVTProvisioningIsManaged=YES \
             -IDEDistributionLogDirectory=/tmp/logs/app-store-export-archive-logs \
-            -DVTSkipCertificateValidityCheck=YES \
-            -DVTServicesLogLevel=3 2>&1 | tee /tmp/logs/app-store-export-archive-logs/xcodebuild-export-archive.log
+            | tee /tmp/logs/app-store-export-archive-logs/xcodebuild-export-archive.log
+            # '-DVTPortalRequest.Endpoint=http://172.16.124.194:8089' \
+            # -DVTProvisioningIsManaged=YES \
+            # -DVTSkipCertificateValidityCheck=YES \
+            # -DVTServicesLogLevel=3 2>&1 \
+            # | tee /tmp/logs/app-store-export-archive-logs/xcodebuild-export-archive.log
     artifacts:
       - resultbundle.xcresult
       - banaan.xcarchive
