@@ -1,4 +1,4 @@
 #!/usr/bin/env zsh
 
-echo "Pre Xcodebuild"
+echo "Post clone"
 printenv
