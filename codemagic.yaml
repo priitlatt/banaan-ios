@@ -51,7 +51,7 @@ workflows:
             -DVTProvisioningIsManaged=YES \
             -IDEDistributionLogDirectory=/tmp/logs/app-store-export-archive-logs \
             -DVTSkipCertificateValidityCheck=YES \
-            -DVTServicesLogLevel=3 2>&1 | tee /tmp/logs/app-store-export-archive-logs/xcodebuild-export-archive.log'
+            -DVTServicesLogLevel=3 2>&1 | tee /tmp/logs/app-store-export-archive-logs/xcodebuild-export-archive.log
     artifacts:
       - resultbundle.xcresult
       - banaan.xcarchive
