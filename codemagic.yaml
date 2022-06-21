@@ -25,16 +25,20 @@ workflows:
         script: |
           mkdir -p /tmp/logs/app-store-export-archive-logs
           mkdir ~/appstoreexport
-          xcodebuild \
-            -exportArchive \
+          xcodebuild archive \
+            -project ios-test2/banaan.xcodeproj \
+            -scheme banaan \
+            -destination generic/platform=iOS \
             -archivePath banaan.xcarchive \
-            -exportPath $HOME/appstoreexport \
-            -exportOptionsPlist export_options.plist \
-            '-DVTPortalRequest.Endpoint=http://172.16.124.194:8089' \
-            -DVTProvisioningIsManaged=YES \
-            -IDEDistributionLogDirectory=/tmp/logs/app-store-export-archive-logs \
-            -DVTSkipCertificateValidityCheck=YES \
-            -DVTServicesLogLevel=3 2>&1 | tee /tmp/logs/app-store-export-archive-logs/xcodebuild-export-archive.log
+            -resultBundleVersion 3 \
+            -resultBundlePath resultbundle.xcresult \
+            -resultStreamPath /tmp/resultBundleStreamd2e9bba2-d26f-445a-b0b5-d36dee4f5198.json \
+            -IDEPostProgressNotifications=YES \
+            CODE_SIGN_IDENTITY=- \
+            AD_HOC_CODE_SIGNING_ALLOWED=YES \
+            DEVELOPMENT_TEAM=X8NNQ9CYL2 \
+            COMPILER_INDEX_STORE_ENABLE=NO \
+            -hideShellScriptEnvironment
       - name: Export archive
         script: |
           xcodebuild \
@@ -48,6 +52,7 @@ workflows:
             -DVTSkipCertificateValidityCheck=YES \
             -DVTServicesLogLevel=3 2>&1 | tee /tmp/logs/app-store-export-archive-logs/xcodebuild-export-archive.log'
     artifacts:
+      - resultbundle.xcresult
       - banaan.xcarchive
       - /tmp/logs/app-store-export-archive-logs/*.log
       - $HOME/appstoreexport/*
