@@ -1,7 +1,4 @@
 #!/usr/bin/env zsh
 
-echo "Post clone"
-
+set -x
 sw_vers
-
-printenv

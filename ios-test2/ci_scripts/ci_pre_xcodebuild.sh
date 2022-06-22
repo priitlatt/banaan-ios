@@ -1,4 +1,4 @@
 #!/usr/bin/env zsh
 
-echo "Pre Xcodebuild"
-printenv
+set -x
+system_profiler
