@@ -64,7 +64,9 @@ workflows:
 
       - echo "Using App Store API key $APP_STORE_CONNECT_KEY_IDENTIFIER"
       - keychain initialize
-      - app-store-connect fetch-signing-files "io.codemagic.banaan" --type IOS_APP_STORE --create
+      - script: |
+          app-store-connect fetch-signing-files "io.codemagic.banaan" --create
+          app-store-connect fetch-signing-files "com.greenhouseci.ios-test2"
       - keychain add-certificates
       - xcode-project use-profiles --code-signing-setup-verbose-logging
       - script: |
