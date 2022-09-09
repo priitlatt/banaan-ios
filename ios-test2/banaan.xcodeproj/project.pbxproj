@@ -203,14 +203,14 @@
 					};
 					3870295E1DE479500008D573 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = T44NESVEFN;
+						DevelopmentTeam = X8NNQ9CYL2;
 						LastSwiftMigration = 1030;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 3870294A1DE479500008D573;
 					};
 					387029691DE479500008D573 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = T44NESVEFN;
+						DevelopmentTeam = X8NNQ9CYL2;
 						LastSwiftMigration = 1030;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 3870294A1DE479500008D573;
@@ -499,11 +499,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGNING_ALLOWED = NO;
 				CODE_SIGNING_REQUIRED = NO;
-				DEVELOPMENT_TEAM = T44NESVEFN;
+				DEVELOPMENT_TEAM = X8NNQ9CYL2;
 				EXPANDED_CODE_SIGN_IDENTITY = "";
 				INFOPLIST_FILE = "ios-test2Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.greenhouseci.ios-test2Tests";
+				PRODUCT_BUNDLE_IDENTIFIER = io.codemagic.banaan.tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/banaan.app/banaan";
@@ -517,11 +517,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGNING_ALLOWED = NO;
 				CODE_SIGNING_REQUIRED = NO;
-				DEVELOPMENT_TEAM = T44NESVEFN;
+				DEVELOPMENT_TEAM = X8NNQ9CYL2;
 				EXPANDED_CODE_SIGN_IDENTITY = "";
 				INFOPLIST_FILE = "ios-test2Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.greenhouseci.ios-test2Tests";
+				PRODUCT_BUNDLE_IDENTIFIER = io.codemagic.banaan.tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/banaan.app/banaan";
@@ -534,11 +534,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGNING_ALLOWED = NO;
 				CODE_SIGNING_REQUIRED = NO;
-				DEVELOPMENT_TEAM = T44NESVEFN;
+				DEVELOPMENT_TEAM = X8NNQ9CYL2;
 				EXPANDED_CODE_SIGN_IDENTITY = "";
 				INFOPLIST_FILE = "ios-test2UITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.greenhouseci.ios-test2UITests";
+				PRODUCT_BUNDLE_IDENTIFIER = io.codemagic.banaan.UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 5.0;
@@ -552,11 +552,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGNING_ALLOWED = NO;
 				CODE_SIGNING_REQUIRED = NO;
-				DEVELOPMENT_TEAM = T44NESVEFN;
+				DEVELOPMENT_TEAM = X8NNQ9CYL2;
 				EXPANDED_CODE_SIGN_IDENTITY = "";
 				INFOPLIST_FILE = "ios-test2UITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.greenhouseci.ios-test2UITests";
+				PRODUCT_BUNDLE_IDENTIFIER = io.codemagic.banaan.UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 5.0;

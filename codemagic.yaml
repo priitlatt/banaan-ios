@@ -66,7 +66,6 @@ workflows:
       - keychain initialize
       - script: |
           app-store-connect fetch-signing-files "io.codemagic.banaan" --create
-          app-store-connect fetch-signing-files "com.greenhouseci.ios-test2"
       - keychain add-certificates
       - xcode-project use-profiles --code-signing-setup-verbose-logging
       - script: |
