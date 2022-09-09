@@ -60,7 +60,7 @@ workflows:
           set -e
           echo $GCLOUD_SERVICE_ACCOUNT_CREDENTIALS > ./gcloud_key_file.json          
           gcloud auth activate-service-account --key-file=gcloud_key_file.json
-          gcloud --quiet config set project ios-testing-3bbef
+          gcloud --quiet config set project ios-testing-a
 
       - echo "Using App Store API key $APP_STORE_CONNECT_KEY_IDENTIFIER"
       - keychain initialize
