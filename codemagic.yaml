@@ -24,6 +24,8 @@ workflows:
         script: |
           agvtool new-marketing-version "1.0.$BUILD_NUMBER"
           agvtool new-version -all "1.0.$BUILD_NUMBER.$PROJECT_BUILD_NUMBER"
+          # fail on purpose
+          avgtool fail
         working_directory: $PROJECT_DIR
       - name: Build ipa
         script: |
