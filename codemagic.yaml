@@ -29,6 +29,8 @@ workflows:
         working_directory: $PROJECT_DIR
       - name: Build ipa
         script: |
+          export XCODE_PROJECT_NO_SHOW_BUILD_SETTINGS=true
+          xcode-project show-build-settings --project "$PROJECT_DIR/banaan.xcodeproj" --scheme "banaan"
           xcode-project build-ipa --project "$PROJECT_DIR/banaan.xcodeproj" --scheme "banaan"
           mv build/ios/ipa/banaan.ipa "build/ios/ipa/banaan_1_0_${BUILD_NUMBER}_${PROJECT_BUILD_NUMBER}.ipa"
       - name: Generate notes
