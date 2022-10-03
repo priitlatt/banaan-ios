@@ -19,3 +19,11 @@ workflows:
     scripts:
       - printenv | grep KEY
       - sleep 30
+  team-signing-files:
+    environment:
+      ios_signing:
+        distribution_type: development
+        bundle_identifier: io.codemagic.banaan
+    scripts:
+      - xcode-project use-profiles
+      - xcode-project build-ipa --project "ios-test2/banaan.xcodeproj" --scheme "banaan"
