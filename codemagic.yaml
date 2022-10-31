@@ -19,20 +19,20 @@ workflows:
       - xcode-project use-profiles
       - name: Set build version
         script: |
-          agvtool new-marketing-version "1.1.$BUILD_NUMBER"
-          agvtool new-version -all "1.1.$BUILD_NUMBER.$PROJECT_BUILD_NUMBER"
+          agvtool new-marketing-version "2.0.$BUILD_NUMBER"
+          agvtool new-version -all "2.0.$BUILD_NUMBER.$PROJECT_BUILD_NUMBER"
         working_directory: $PROJECT_DIR
       - name: Build ipa
         script: |
           xcode-project build-ipa --project "$PROJECT_DIR/banaan.xcodeproj" --scheme "banaan"
-          mv build/ios/ipa/banaan.ipa "build/ios/ipa/banaan_1_1_${BUILD_NUMBER}_${PROJECT_BUILD_NUMBER}.ipa"
+          mv build/ios/ipa/banaan.ipa "build/ios/ipa/banaan_2_0_${BUILD_NUMBER}_${PROJECT_BUILD_NUMBER}.ipa"
       - name: Generate notes
         script: |
           cat > release_notes.json << EOF
           [
-            {"language": "en-GB", "text": "en-GB notes for build 1.1.${BUILD_NUMBER:?}.${PROJECT_BUILD_NUMBER:?}"},
-            {"language": "en-US", "text": "en-US notes for build 1.1.${BUILD_NUMBER:?}.${PROJECT_BUILD_NUMBER:?}"},
-            {"language": "fi", "text": "fi notes for build 1.1.${BUILD_NUMBER:?}.${PROJECT_BUILD_NUMBER:?}"}
+            {"language": "en-GB", "text": "en-GB notes for build 2.0.${BUILD_NUMBER:?}.${PROJECT_BUILD_NUMBER:?}"},
+            {"language": "en-US", "text": "en-US notes for build 2.0.${BUILD_NUMBER:?}.${PROJECT_BUILD_NUMBER:?}"},
+            {"language": "fi", "text": "fi notes for build 2.0.${BUILD_NUMBER:?}.${PROJECT_BUILD_NUMBER:?}"}
           ]
           EOF
     artifacts:
