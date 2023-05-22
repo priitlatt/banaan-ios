@@ -30,6 +30,13 @@ workflows:
       - build/ios/xcarchive/*.xcarchive
       - build/ios/ipa/*.ipa
       - /tmp/xcodebuild_logs/*.log
+    publishing:
+      slack:
+        channel: '#slack-dumpster'
+        notify_on_build_start: true
+        notify:
+          success: true
+          failure: true
 
   test-app:
     name: Test App
