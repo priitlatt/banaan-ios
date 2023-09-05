@@ -7,7 +7,7 @@ workflows:
         - apple-code-signing
       vars:
         PROJECT_DIR: ios-test2
-      xcode: latest
+      # xcode: latest
       cocoapods: default
     scripts:
       - keychain initialize
