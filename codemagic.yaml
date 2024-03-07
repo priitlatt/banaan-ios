@@ -31,6 +31,10 @@ workflows:
       - build/ios/ipa/*.ipa
       - /tmp/xcodebuild_logs/*.log
 
+  empty:
+    scripts:
+      - echo "Empty"
+
   test-app:
     name: Test App
     scripts:
