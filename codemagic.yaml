@@ -32,6 +32,8 @@ workflows:
       - /tmp/xcodebuild_logs/*.log
 
   empty:
+    environment:
+      xcode: 15.2
     scripts:
       - echo "Empty"
 
