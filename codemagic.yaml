@@ -24,10 +24,6 @@ workflows:
         PROJECT_DIR: ios-test2
       cocoapods: default
     scripts:
-      - |
-        python3 -m pip install --upgrade -i https://test.pypi.org/simple/ codemagic-cli-tools
-        set -x
-        codemagic-cli-tools version
       - echo "Using App Store API key $APP_STORE_CONNECT_KEY_IDENTIFIER"
       - keychain initialize
       - app-store-connect fetch-signing-files "io.codemagic.banaan" --type IOS_APP_STORE --create
