@@ -15,7 +15,7 @@ workflows:
     environment:
       xcode: ${{ inputs.xcode }}
     scripts:
-      - pip install -i https://test.pypi.org/simple/ codemagic-cli-tools
+      - pip install -i https://test.pypi.org/simple/ --upgrade codemagic-cli-tools
       - xcode-project --version
       - name: Run tests
         script: xcode-project run-tests --project "ios-test2/banaan.xcodeproj" --scheme "banaan"  # --device "iOS 14.0 iPhone 11"
