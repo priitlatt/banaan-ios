@@ -53,7 +53,7 @@ workflows:
         working_directory: $PROJECT_DIR
       - name: Rename artifact
         script: mv "derivedData/Build/Products/Debug-iphonesimulator/banaan.app" "derivedData/Build/Products/Debug-iphonesimulator/banaan_1_0_${BUILD_NUMBER}_${PROJECT_BUILD_NUMBER}.app"
-   artifacts:
+    artifacts:
       - derivedData/Build/Products/*-iphonesimulator/*.app
 
   empty:
