@@ -1,6 +1,6 @@
 workflows:
-  build-app:
-    name: Build App
+  build-ipa:
+    name: Build ipa
     environment:
       groups:
         - Apple API key (Admin)
@@ -30,6 +30,31 @@ workflows:
       - build/ios/xcarchive/*.xcarchive
       - build/ios/ipa/*.ipa
       - /tmp/xcodebuild_logs/*.log
+
+    build-app:
+    name: Build app
+    environment:
+      vars:
+        PROJECT_DIR: ios-test2
+    scripts:
+      - name: Set build version
+        script: |
+          agvtool new-marketing-version "1.0.$BUILD_NUMBER"
+          agvtool new-version -all "1.0.$BUILD_NUMBER.$PROJECT_BUILD_NUMBER"
+        working_directory: $PROJECT_DIR
+      - name: Build app
+        script: |
+          xcodebuild \
+            -project banaan.xcodeproj \
+            -scheme banaan \
+            -destination 'generic/platform=iphonesimulator' \
+            -derivedDataPath ../derivedData \
+            clean build
+        working_directory: $PROJECT_DIR
+      - name: Rename artifact
+        script: mv "derivedData/Build/Products/Debug-iphonesimulator/banaan.app" "derivedData/Build/Products/Debug-iphonesimulator/banaan_1_0_${BUILD_NUMBER}_${PROJECT_BUILD_NUMBER}.app"
+   artifacts:
+      - derivedData/Build/Products/*-iphonesimulator/*.app
 
   empty:
     environment:
