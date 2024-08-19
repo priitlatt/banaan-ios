@@ -15,7 +15,7 @@ workflows:
           - 15.0
     name: Build app
     environment:
-      xcode: ${{ inputs.xcode }}
+      xcode: "${{ inputs.xcode }}"
       groups:
         - Apple API key (Admin)
       vars:
