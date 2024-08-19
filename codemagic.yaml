@@ -40,6 +40,7 @@ workflows:
           mv build/ios/ipa/banaan.ipa "build/ios/ipa/banaan_2_0_${BUILD_NUMBER}_${PROJECT_BUILD_NUMBER}.ipa"
     artifacts:
       - build/ios/ipa/*.ipa
+      - build/ios/xcarchive/**/*.app
       - /tmp/xcodebuild_logs/*.log
 
   build-and-upload:
