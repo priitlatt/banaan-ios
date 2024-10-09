@@ -63,7 +63,23 @@ workflows:
       - echo "Empty"
 
   test-app:
-    name: Test App
+    name: Test App   
+    inputs:
+      xcode:
+        description: Xcode version
+        type: choice
+        default: latest
+        options:
+          - latest
+          - 16.1
+          - 16.0
+          - 15.4
+          - 15.3
+          - 15.2
+          - 15.1
+          - 15.0
+    environment:
+      xcode: ${{ inputs.xcode }}
     scripts:
       - name: Run tests
         script: xcode-project run-tests --project "ios-test2/banaan.xcodeproj" --scheme "banaan"  # --device "iOS 14.0 iPhone 11"
