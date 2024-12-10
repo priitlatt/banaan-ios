@@ -47,6 +47,7 @@ workflows:
     artifacts:
       - build/ios/ipa/*.ipa
       - build/ios/xcarchive/**/*.app
+      - build/ios/xcarchive/**/*.xcarchive
       - /tmp/xcodebuild_logs/*.log
 
   build-and-upload:
