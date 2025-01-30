@@ -20,6 +20,8 @@ workflows:
     inputs:
       xcode: *xcode-input
     name: Build app
+    labels:
+      - "${{ inputs.xcode }}"
     environment:
       xcode: "${{ inputs.xcode }}"
       groups:
