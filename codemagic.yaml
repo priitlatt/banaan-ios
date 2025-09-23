@@ -71,6 +71,7 @@ workflows:
         default: latest
         options:
           - latest
+          - 26
           - 16.1
           - 16.0
           - 15.4
