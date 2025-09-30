@@ -40,7 +40,7 @@ workflows:
         - $HOME/Library/Developer/Xcode/DerivedData/CompilationCache.noindex
     scripts:
       - keychain initialize
-      - app-store-connect fetch-signing-files "io.codemagic.banaan" --type IOS_APP_STORE --create
+      - app-store-connect fetch-signing-files "io.codemagic.banaan" --type IOS_APP_STORE --create --delete-stale-profiles
       - keychain add-certificates
       - xcode-project use-profiles
       - |
