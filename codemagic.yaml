@@ -31,9 +31,9 @@ workflows:
         APP_STORE_CONNECT_ALTOOL_VERBOSE_LOGGING: true
       xcode: "${{ inputs.xcode }}"
     scripts:
-      - ls -l *.ipa
+      - ls -l "*.ipa"
     artifacts:
-      - *.ipa
+      - "*.ipa"
     publishing:
       app_store_connect:
         submit_to_testflight: false
