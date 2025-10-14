@@ -27,8 +27,6 @@ workflows:
     environment:
       groups:
         - Apple API key (Admin)
-      vars:
-        APP_STORE_CONNECT_ALTOOL_VERBOSE_LOGGING: true
       xcode: "${{ inputs.xcode }}"
     scripts:
       - ls -l *.ipa
