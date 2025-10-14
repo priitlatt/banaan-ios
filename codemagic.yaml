@@ -28,6 +28,8 @@ workflows:
       groups:
         - Apple API key (Admin)
       xcode: "${{ inputs.xcode }}"
+      vars:
+        APP_STORE_CONNECT_ALTOOL_ADDITIONAL_ARGUMENTS: --use-old-altool
     scripts:
       - ls -l *.ipa
     artifacts:
