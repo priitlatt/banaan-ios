@@ -42,11 +42,11 @@ workflows:
       - app-store-connect fetch-signing-files "io.codemagic.banaan" --type IOS_APP_STORE --create
       - keychain add-certificates
       - xcode-project use-profiles
-      - name: Set build version
-        script: |
-          agvtool new-marketing-version "2.0.$BUILD_NUMBER"
-          agvtool new-version -all "2.0.$BUILD_NUMBER.$PROJECT_BUILD_NUMBER"
-        working_directory: $PROJECT_DIR
+      # - name: Set build version
+      #   script: |
+      #     agvtool new-marketing-version "2.0.$BUILD_NUMBER"
+      #     agvtool new-version -all "2.0.$BUILD_NUMBER.$PROJECT_BUILD_NUMBER"
+      #   working_directory: $PROJECT_DIR
       - name: Build ipa
         script: |
           xcode-project build-ipa --project "$PROJECT_DIR/banaan.xcodeproj" --scheme "banaan"
