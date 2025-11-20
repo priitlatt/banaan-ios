@@ -31,9 +31,9 @@ workflows:
       cocoapods: default
     scripts:
       - echo "Using App Store API key $APP_STORE_CONNECT_KEY_IDENTIFIER"
-      - keychain initialize
       - app-store-connect fetch-signing-files "io.codemagic.banaan" --type IOS_APP_STORE --create
       - keychain add-certificates
+      - security set-key-partition-list -S "apple-tool:,apple:,codesign:" -k "" -s /Users/builder/Library/Keychains/login.keychain-db
       - xcode-project use-profiles
       - name: Set build version
         script: |
