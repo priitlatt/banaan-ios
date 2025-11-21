@@ -57,8 +57,6 @@ workflows:
       - derivedData/Build/Products/*-iphonesimulator/*.app
 
   empty:
-    environment:
-      xcode: 15.2
     scripts:
       - echo "Empty"
 
