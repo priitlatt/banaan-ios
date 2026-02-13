@@ -105,6 +105,11 @@ workflows:
       cocoapods: default
       xcode: "${{ inputs.xcode }}"
     scripts:
+      - name: Update Codemagic CLI tools
+        script: |
+          uv tool uninstall codemagic-cli-tools
+          uv tool install https://github.com/codemagic-ci-cd/cli-tools/archive/refs/heads/default-provisioning-profile-paths.zip
+          codemagic-cli-tools --version --verbose
       - echo "Using App Store API key $APP_STORE_CONNECT_KEY_IDENTIFIER"
       - keychain initialize
       - app-store-connect fetch-signing-files "io.codemagic.banaan" --type IOS_APP_STORE --create
