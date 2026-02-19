@@ -6,6 +6,8 @@ definitions:
       default: latest
       options:
         - latest
+        - 26.3
+        - 26.4
         - 26.2
         - 26.1
         - 26.0
