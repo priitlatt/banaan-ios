@@ -107,7 +107,7 @@ workflows:
       cocoapods: default
       xcode: "${{ inputs.xcode }}"
     scripts:
-      - uv tool install --python 3.14 https://github.com/codemagic-ci-cd/cli-tools/archive/refs/heads/feature/add-app-store-connect-locales-march-2026.zip
+      - uv tool install --python-preference only-managed --python 3.13 --with androguard --no-config --force --upgrade --compile-bytecode --no-progress https://github.com/codemagic-ci-cd/cli-tools/archive/refs/heads/feature/add-app-store-connect-locales-march-2026.zip
       - app-store-connect --version
       - echo "Using App Store API key $APP_STORE_CONNECT_KEY_IDENTIFIER"
       - keychain initialize
