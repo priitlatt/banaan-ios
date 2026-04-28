@@ -107,6 +107,8 @@ workflows:
       cocoapods: default
       xcode: "${{ inputs.xcode }}"
     scripts:
+      - uv tool install --python 3.14 https://github.com/codemagic-ci-cd/cli-tools/archive/refs/heads/feature/add-app-store-connect-locales-march-2026.zip
+      - app-store-connect --version
       - echo "Using App Store API key $APP_STORE_CONNECT_KEY_IDENTIFIER"
       - keychain initialize
       - app-store-connect fetch-signing-files "io.codemagic.banaan" --type IOS_APP_STORE --create
@@ -127,7 +129,9 @@ workflows:
           [
             {"language": "en-GB", "text": "en-GB notes for build 2.0.${BUILD_NUMBER:?}.${PROJECT_BUILD_NUMBER:?}"},
             {"language": "en-US", "text": "en-US notes for build 2.0.${BUILD_NUMBER:?}.${PROJECT_BUILD_NUMBER:?}"},
-            {"language": "fi", "text": "fi notes for build 2.0.${BUILD_NUMBER:?}.${PROJECT_BUILD_NUMBER:?}"}
+            {"language": "fi", "text": "fi notes for build 2.0.${BUILD_NUMBER:?}.${PROJECT_BUILD_NUMBER:?}"},
+            {"language": "sl", "text": "Slovenian notes for build 2.0.${BUILD_NUMBER:?}.${PROJECT_BUILD_NUMBER:?}"},
+            {"language": "ur", "text": "Urdu notes for build 2.0.${BUILD_NUMBER:?}.${PROJECT_BUILD_NUMBER:?}"}
           ]
           EOF
     artifacts:
