@@ -130,8 +130,7 @@ workflows:
             {"language": "en-GB", "text": "en-GB notes for build 2.0.${BUILD_NUMBER:?}.${PROJECT_BUILD_NUMBER:?}"},
             {"language": "en-US", "text": "en-US notes for build 2.0.${BUILD_NUMBER:?}.${PROJECT_BUILD_NUMBER:?}"},
             {"language": "fi", "text": "fi notes for build 2.0.${BUILD_NUMBER:?}.${PROJECT_BUILD_NUMBER:?}"},
-            {"language": "sl-SI", "text": "Slovenian notes for build 2.0.${BUILD_NUMBER:?}.${PROJECT_BUILD_NUMBER:?}"},
-            {"language": "ur", "text": "Urdu notes for build 2.0.${BUILD_NUMBER:?}.${PROJECT_BUILD_NUMBER:?}"}
+            {"language": "sl-SI", "text": "Slovenian notes for build 2.0.${BUILD_NUMBER:?}.${PROJECT_BUILD_NUMBER:?}"}
           ]
           EOF
     artifacts:
