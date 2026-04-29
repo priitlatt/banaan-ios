@@ -130,7 +130,17 @@ workflows:
             {"language": "en-GB", "text": "en-GB notes for build 2.0.${BUILD_NUMBER:?}.${PROJECT_BUILD_NUMBER:?}"},
             {"language": "en-US", "text": "en-US notes for build 2.0.${BUILD_NUMBER:?}.${PROJECT_BUILD_NUMBER:?}"},
             {"language": "fi", "text": "fi notes for build 2.0.${BUILD_NUMBER:?}.${PROJECT_BUILD_NUMBER:?}"},
-            {"language": "sl-SI", "text": "Slovenian notes for build 2.0.${BUILD_NUMBER:?}.${PROJECT_BUILD_NUMBER:?}"}
+            {"language": "bn-BD", "text": "Bangla notes for 2.0.${BUILD_NUMBER:?}.${PROJECT_BUILD_NUMBER:?}"},
+            {"language": "gu-IN", "text": "Gujarati notes for 2.0.${BUILD_NUMBER:?}.${PROJECT_BUILD_NUMBER:?}"},
+            {"language": "kn-IN", "text": "Kannada notes for 2.0.${BUILD_NUMBER:?}.${PROJECT_BUILD_NUMBER:?}"},
+            {"language": "ml-IN", "text": "Malayalam notes for 2.0.${BUILD_NUMBER:?}.${PROJECT_BUILD_NUMBER:?}"},
+            {"language": "mr-IN", "text": "Marathi notes for 2.0.${BUILD_NUMBER:?}.${PROJECT_BUILD_NUMBER:?}"},
+            {"language": "or-IN", "text": "Odia notes for 2.0.${BUILD_NUMBER:?}.${PROJECT_BUILD_NUMBER:?}"},
+            {"language": "pa-IN", "text": "Punjabi notes for 2.0.${BUILD_NUMBER:?}.${PROJECT_BUILD_NUMBER:?}"},
+            {"language": "sl-IN", "text": "Slovenian notes for 2.0.${BUILD_NUMBER:?}.${PROJECT_BUILD_NUMBER:?}"},
+            {"language": "ta-IN", "text": "Tamil notes for 2.0.${BUILD_NUMBER:?}.${PROJECT_BUILD_NUMBER:?}"},
+            {"language": "te-IN", "text": "Telugu notes for 2.0.${BUILD_NUMBER:?}.${PROJECT_BUILD_NUMBER:?}"},
+            {"language": "ur-PK", "text": "Urdu notes for 2.0.${BUILD_NUMBER:?}.${PROJECT_BUILD_NUMBER:?}"}
           ]
           EOF
     artifacts:
