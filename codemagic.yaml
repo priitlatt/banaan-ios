@@ -57,6 +57,8 @@ workflows:
       - derivedData/Build/Products/*-iphonesimulator/*.app
 
   empty:
+    environment:
+      xcode: edge
     scripts:
       - echo "Empty"
 
