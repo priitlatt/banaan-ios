@@ -80,7 +80,7 @@ workflows:
     inputs:
       <<: *xcode_version
     environment:
-      xcode: edge
+      xcode: ${{ inputs.xcode }}
     scripts:
       - echo "Empty"
       - xcodebuild -version && xcrun xcresulttool get test-results summary --schema
