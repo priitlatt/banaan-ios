@@ -83,6 +83,7 @@ workflows:
       xcode: edge
     scripts:
       - echo "Empty"
+      - xcrun xcresulttool get test-results summary --schema
 
   test-app:
     name: Test App   
