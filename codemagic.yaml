@@ -83,7 +83,8 @@ workflows:
       xcode: ${{ inputs.xcode }}
     scripts:
       - echo "Empty"
-      - xcodebuild -version && xcrun xcresulttool get test-results summary --schema
+      - xcrun xcresulttool get test-results summary --schema
+      - xcrun xcresulttool get test-results tests --schema
 
   test-app:
     name: Test App   
