@@ -1,3 +1,23 @@
+definitions:
+  inputs:
+    - &xcode_version
+      xcode:
+        description: Xcode version
+        type: choice
+        default: latest
+        options:
+          - latest
+          - 27.2
+          - 27.1
+          - 27.0
+          - 26.2
+          - 26.1
+          - 26.0
+          - 16.4
+          - 16.3
+          - 16.2
+          - 16.1
+          - 16.0
 workflows:
   build-ipa:
     name: Build ipa
@@ -57,6 +77,8 @@ workflows:
       - derivedData/Build/Products/*-iphonesimulator/*.app
 
   empty:
+    inputs:
+      <<: *xcode_version
     environment:
       xcode: edge
     scripts:
@@ -65,19 +87,7 @@ workflows:
   test-app:
     name: Test App   
     inputs:
-      xcode:
-        description: Xcode version
-        type: choice
-        default: latest
-        options:
-          - latest
-          - 26.1
-          - 26.0
-          - 16.4
-          - 16.3
-          - 16.2
-          - 16.1
-          - 16.0
+      <<: *xcode_version
     environment:
       xcode: ${{ inputs.xcode }}
     scripts:
