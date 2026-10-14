@@ -99,5 +99,5 @@ workflows:
     artifacts:
       - /tmp/xcodebuild_logs/*.log
     publishing:
-    scripts:
-      script: echo "${CM_ARTIFACT_LINKS}"
+      scripts:
+        - script: echo "${CM_ARTIFACT_LINKS}"
