@@ -98,3 +98,6 @@ workflows:
         test_report: build/ios/test/*.xml
     artifacts:
       - /tmp/xcodebuild_logs/*.log
+    publishing:
+    scripts:
+      script: echo "${CM_ARTIFACT_LINKS}"
